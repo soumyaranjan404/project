@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   
+    <title>colour change</title>
+    <style>
+        
+        #grey{
+            background-color: gray;
+        }
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: blue;
+            
+        }
+        #green{
+            background-color: green;
+        }
+        .colr{
+            width: 50px;
+            height: 50px;
+            display: grid;
+             display: inline-block;
+            text-align: center;
+            align-content: center;
+
+        }
+    
+
+    </style>
+</head>
+<body>
+  
+   <span class="colr" id="grey">A</span>
+   <span class="colr" id="red">B</span>
+   <span class="colr " id="blue">C</span>
+   <span class="colr" id="green">D</span>
+
+   <script>
+    console.log("hii");
+
+    const body =  document.querySelector('body');
+   const clas =  document.querySelectorAll('.colr');
+   
+   clas.forEach((box)=>{
+    box.addEventListener('click',function (you){
+        console.log(you);
+        if(you.target.id === 'grey')
+        {
+            body.style.backgroundColor='grey';
+        }
+        else if(you.target.id=="red")
+        {
+            body.style.backgroundColor='red'
+        } else if(you.target.id=="blue")
+        {
+            body.style.backgroundColor='blue'
+        } else if (you.target.id=='green')
+        {
+            body.style.backgroundColor='green'
+        }
+
+    })
+   });
+</script>
+   
+</body>
+</html>
